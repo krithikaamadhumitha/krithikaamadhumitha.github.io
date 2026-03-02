@@ -1,1 +1,0 @@
-# krithikaamadhumitha.github.io
