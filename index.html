@@ -1,74 +1,305 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Krithikaa Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- FontAwesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-  <!-- Banner Section -->
-  <header class="banner">
-    <h1>Krithikaa Madhumitha KT</h1>
-    <p>Project Management • Data Analytics • Digital Transformation</p>
-    <a href="#projects" class="btn">View My Work</a>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <link rel="icon" href="ds-favicon.svg" type="image/svg+xml" />
+    <title>Krithikaa Madhumitha | Project Management Portfolio</title>
+    <meta
+      name="description"
+      content="Versatile program manager and technology professional, skilled in driving transformation through project leadership, data analytics and innovation across diverse industries."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="theme-dark">
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+    <div class="noise-overlay" aria-hidden="true"></div>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Strategic IT & BFSI program manager with expertise in project delivery, stakeholder communication, and data-driven transformation. Experienced across Deloitte, NGO, and technology roles, blending technical rigor with narrative impact.</p>
-  </section>
+    <header class="site-header">
+      <a class="logo" href="index.html" aria-label="Home">
+        <span>DS</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-profile">
+        <div class="profile-avatar profile-avatar-small" aria-hidden="true"></div>
+        <span class="header-name">Krithikaa Madhumitha</span>
+      </div>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="projects.html">Projects</a>
+        <a
+          class="btn btn-primary btn-glow"
+          href="Krithikaa%20Madhumitha%20KT.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          Resume
+        </a>
+      </div>
+    </header>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills & Tools</h2>
-    <ul class="skills-list">
-      <li><i class="fas fa-project-diagram"></i> Project Management (Jira, MS Project)</li>
-      <li><i class="fas fa-database"></i> SQL, Databricks, SAS</li>
-      <li><i class="fas fa-chart-bar"></i> Power BI, Tableau, Excel Macros</li>
-      <li><i class="fas fa-robot"></i> AI/ML Applications</li>
-    </ul>
-  </section>
+    <main>
+      <section class="hero section">
+        <div class="hero-content">
+          <div class="intro-badge glass">
+            <div class="profile-avatar" aria-hidden="true"></div>
+            <div>
+              <p class="eyebrow">Hello, I am</p>
+              <h3>Krithikaa Madhumitha</h3>
+              <p class="muted">Project Management • Data Analytics • Digital Transformation</p>
+            </div>
+          </div>
+          <p class="eyebrow">Project Management Professional</p>
+          <h1>
+            Krithikaa Madhumitha
+            <span class="hero-highlight">Leadership  |  Analytics  |  Innovation</span>
+          </h1>
+          <p class="lead">
+            I am a versatile program manager and technology professional with experience leading projects across consulting, 
+            IT and transformation initiatives. Skilled in project delivery, stakeholder communication and data analytics. 
+            I thrive on turning complex challenges into structured outcomes. My focus is on driving innovation, efficiency and 
+            impact across diverse industries.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="btn btn-primary btn-glow"
+              href="Krithikaa%20Madhumitha%20KT.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              Download Resume
+            </a>
+            <a class="btn btn-ghost" href="projects.html">Explore Projects</a>
+          </div>
+          <div class="project-spotlight glass">
+            <span class="muted">Project Spotlight</span>
+            <strong id="spotlight-title">Amazon Go</strong>
+            <span id="spotlight-tag" class="pill">Retail Innovation</span>
+          </div>
+          <div class="hero-badges">
+            <span class="pill">Project Lifecycle Management</span>
+            <span class="pill">Stakeholder Communication</span>
+            <span class="pill">Agile & Scrum Methodologies</span>
+            <span class="pill">Risk Assessment & Mitigation</span>
+            <span class="pill">Regulatory Compliance (IFRS17)</span>
+            <span class="pill">Process Optimization</span>
+            <span class="pill">Data Analysis & Reporting</span>
+            <span class="pill">Quality Assurance & Testing</span>
+            <span class="pill">Cross-Functional Team Leadership</span>
+            <span class="pill">Resource Planning & Allocation</span>
+            <span class="pill">Change & Release Management</span>
+          </div>
+        </div>
+        <div class="hero-visual card glass">
+          <div class="stat-grid">
+            <div class="stat">
+              <span class="stat-value" data-count="9+">0</span>
+              <span class="stat-label">Years Experience</span> 
+            </div>
+            <div class="stat">
+              <span class="stat-value" data-count="20+">0</span>
+              <span class="stat-label">Projects Delivered</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value" data-count="6+">0</span>
+              <span class="stat-label">Awards Earned</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value" data-count="90">0</span>
+              <span class="stat-label">Automation Coverage</span>
+            </div>
+          </div>
+      </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <h3>Pepperfry – E-Commerce Strategy</h3>
-      <p>Analyzed digital business model and proposed roadmap for scaling customer engagement.</p>
-    </div>
-    <div class="project-card">
-      <h3>Amazon Go – Retail Innovation</h3>
-      <p>Studied cashier-less model and assessed feasibility in Indian retail ecosystem.</p>
-    </div>
-    <div class="project-card">
-      <h3>Exide Industries – BFSI Linkages</h3>
-      <p>Evaluated financial performance and recommended diversification strategies.</p>
-    </div>
-    <div class="project-card">
-      <h3>NeoMotion – Healthcare Tech</h3>
-      <p>Designed growth strategy for assistive mobility solutions with social impact.</p>
-    </div>
-    <div class="project-card">
-      <h3>Fraud Detection in Healthcare Insurance</h3>
-      <p>Built classification model achieving 95% precision, saving significant costs.</p>
-    </div>
-  </section>
+      <section id="projects" class="section">
+        <div class="section-header">
+          <div>
+            <h2>Featured Projects</h2>
+          </div>
+        </div>
+        <div class="project-grid">
+          <article class="card project-card glass reveal">
+            <div class="project-header">
+            	<h2>Pepperfry – E-Commerce Strategy</h2>
+            	<p>Analyzed digital business model and proposed roadmap for scaling customer engagement.</p>
+            </div>
+            <a class="link" href="https://github.com/krithikaamadhumitha/Pepperfry" target="_blank" rel="noopener">
+              View Project
+            </a>
+          </article>
+          <article class="card project-card glass reveal">
+            <div class="project-header">
+            	<h2>Amazon Go – Retail Innovation</h2>
+            	<p>Feasibility study of cashier-less retail in American markets.</p>
+            </div>
+            <a class="link" href="https://github.com/krithikaamadhumitha/AmazonGo" target="_blank" rel="noopener">
+              View Project
+            </a>
+          </article>
+          <article class="card project-card glass reveal">
+            <div class="project-header">
+            	<h2>Exide Industries – BFSI Linkages</h2>
+            	<p>Financial analysis and diversification strategies into BFSI/insurance.</p>
+            </div>
+            <a class="link" href="https://github.com/krithikaamadhumitha/ExideIndustries" target="_blank" rel="noopener">
+              View Project
+            </a>
+          </article>
+          <article class="card project-card glass reveal">
+            <div class="project-header">
+            	<h2>NeoMotion – Healthcare Tech</h2>
+            	<p>Designed a growth strategy for assistive mobility solutions, blending technology with social impact. Focused on scaling operations and improving accessibility for differently‑abled communities.
+		</p>
+            </div>
+            <a class="link" href="https://github.com/krithikaamadhumitha/NeoMotion" target="_blank" rel="noopener">
+              View Project
+            </a>
+          </article>
+          <article class="card project-card glass reveal">
+            <div class="project-header">
+            	<h2>Fraud Data Claim – Insurance Analytics</h2>
+            	<p>Built a classification model achieving 95% precision in detecting fraudulent claims. Delivered significant cost savings and improved risk management in healthcare insurance.
+		</p>
+            </div>
+            <a class="link" href="https://github.com/krithikaamadhumitha/FraudClaimData" target="_blank" rel="noopener">
+              View Project
+            </a>
+          </article>
+          
+        </div>
+      </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Connect with me:</p>
-    <a href="https://www.linkedin.com/in/krithikaa" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-    <a href="https://github.com/krithikaa" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-    <a href="mailto:krithikaa@example.com"><i class="fas fa-envelope"></i> Email</a>
-  </section>
+      <section id="experience" class="section split">
+        <div class="section-title">
+          <h2>Professional Experience</h2>
+          <p>Client-focused analytics delivery across consulting, finance, and technology.</p>
+        </div>
+        <div class="card glass timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div>
+              <h3>Deloitte Consulting LLP</h3>
+              <p class="muted">June 2021 – November 2024 · Chennai, India</p>
+              <p class="education-summary">
+		Directed SAS‑to‑Azure migrations and cross‑functional teams, delivering transformation projects and earning multiple Applause & Spot Awards.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div>
+              <h3>Ramesh Nimmagadda Cancer Foundation</h3>
+              <p class="muted">September 2028 – July 2020 · Chennai, India</p>
+              <p class="education-summary">
+		Streamlined oncology data workflows and built automated testing environments to enhance healthcare IT efficiency.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div>
+              <h3>Jade Vine Technology</h3>
+              <p class="muted">May 2014 – August 2018 · Chennai, India</p>
+              <p class="education-summary">
+		Led QA teams through SIT phases, defect management, and stakeholder reporting, earning recognition for creative problem‑solving.
+              </p>
+            </div>
+          </div>
+      </section>
 
-  <footer>
-    <p>© 2026 Krithikaa Madhumitha KT | Portfolio</p>
-  </footer>
-</body>
+      <section id="education" class="section split">
+        <div class="section-title">
+          <h2>Education</h2>
+          <p>Academic foundation in analytics and engineering.</p>
+        </div>
+        <div class="education-grid">
+          <div class="card glass education-card">
+            <div class="education-header">
+              <h3>Indian Institute of Management, Trichy</h3>
+              <p class="muted">Executive General Program Management</p>
+            </div>
+            <div class="education-meta">
+              <span>December 2025</span>
+            </div>
+            <p class="education-summary">
+              	Strengthened leadership, strategy, and transformation skills with cross‑industry case studies.
+            </p>
+          </div>
+          <div class="card glass education-card">
+            <div class="education-header">
+              <h3>Great Lakes Institute of Management</h3>
+              <p class="muted">Post Graduate Program, Data Science and Engineering</p>
+            </div>
+            <div class="education-meta">
+              <span>April 2021</span>
+            </div>
+            <p class="education-summary">
+              	Built expertise in statistical modeling, machine learning and data analytics to solve business problems.
+            </p>
+          </div>
+          <div class="card glass education-card">
+            <div class="education-header">
+              <h3>St. Joseph's College Of Engineering</h3>
+              <p class="muted">Bachelor of Technology - BTech, Information Technology</p>
+            </div>
+            <div class="education-meta">
+              <span>April 2014</span>
+            </div>
+            <p class="education-summary">
+              	Built strong analytical and technical foundations, enabling transition into IT Industry
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="certifications" class="section split">
+        <div class="section-title">
+          <h2>Certifications</h2>
+          <p>Continuous learning across data science and cloud.</p>
+        </div>
+        <div class="card glass">
+          <div class="skills-grid">
+            <span class="pill-highlight">Databricks Accredited Generative AI Fundamentals – Databricks, 2025</span>
+            <span class="pill-highlight">Agile Coach – Agile Enterprise Coach, 2025</span>
+            <span class="pill-highlight">Power BI Data Analyst Associate (PL-300) – Microsoft, 2022</span>
+            <span class="pill-highlight">Project Management – LIBA Management Development Center, 2018</span>
+            <span class="pill-highlight">Business English Certificate Vantage –University of Cambridge, 2012</span>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="section split">
+        <div class="section-title">
+          <h2>Contact</h2>
+        </div>
+        <div class="card glass contact-card">
+          <div>
+            <h3>Connect with me</h3>
+          </div>
+          <div class="contact-links">
+            <a class="contact-highlight" href="https://www.linkedin.com/in/krithikaa" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a class="contact-highlight" href="mailto:krithikaa@example.com"><i class="fas fa-envelope"></i> Email</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Krithikaa Madhumitha KT | Portfolio</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
