@@ -1,0 +1,405 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background: #f5f7fa;
+  --text-primary: #222222;
+  --text-secondary: #555555;
+  --primary: #007bff;
+  --secondary: #ff7b72;
+  --highlight: #ffdd57;
+  --card-bg: #ffffff;
+  --hover-bg: #e6f0ff;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background: var(--background);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* offset for sticky header */
+}
+
+/* Compact Section Spacing */
+section {
+  padding: 28px 18px;   /* slightly reduced */
+}
+section h2 {
+  margin-bottom: 12px;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  background: rgba(0,0,0,0.05);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.site-header a {
+  color: var(--text-primary);
+  text-decoration: none;
+  margin: 0 8px;
+}
+.site-header a:hover {
+  color: var(--primary);
+}
+
+/* Hero Banner */
+.hero-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 25px 20px;
+  background: linear-gradient(135deg, #ffffff, #e6f0ff);
+  color: var(--text-primary);
+  border-radius: 12px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: float 4s ease-in-out infinite;
+}
+.hero-text h1 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+.hero-text p {
+  font-size: 1.1rem;
+  margin: 6px 0;
+}
+.hero-actions {
+  margin-top: 15px;
+}
+
+/* Section Defaults */
+section {
+  padding: 35px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-bottom: 1px solid #eee;
+}
+section h2 {
+  color: var(--secondary);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* About */
+#about p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+  text-align: center;
+}
+.skill {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.skill:hover {
+  transform: translateY(-5px);
+}
+.skill i {
+  font-size: 1.4rem;
+  color: var(--primary);
+  margin-bottom: 6px;
+  transition: color 0.3s;
+}
+.skill:hover i {
+  color: var(--secondary);
+}
+.skill p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Apply to skills/projects for staggered fade-in */
+.skills-grid .skill,
+.project-grid .project-card {
+  animation: fadeInUp 0.8s ease-in-out forwards;
+  opacity: 0; /* ensures fade-in works */
+}
+
+/* Stats */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+.stat {
+  text-align: center;
+  padding: 10px;
+  animation: fadeInUp 1s ease-in-out;
+}
+.stat i {
+  font-size: 2rem;
+  color: var(--secondary);
+  margin-bottom: 8px;
+  animation: bounce 2s infinite;
+}
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* Projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 15px;
+}
+.project-card {
+  border-radius: 12px;
+  background: var(--card-bg);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 123, 255, 0.25); /* subtle blue glow */
+}
+.project-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--highlight); /* yellow for all project titles */
+  margin-bottom: 8px;
+}
+.project-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+.project-card .link {
+  display: inline-block;
+  margin-top: 8px;
+  background: var(--hover-bg);   /* light bubble background */
+  border-radius: 20px;           /* pill/bubble shape */
+  padding: 6px 12px;
+  font-size: 0.85rem;            /* smaller font */
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.project-card .link:hover {
+  background: var(--highlight);
+  color: #222;
+  transform: scale(1.05);
+  text-decoration: none;   /* ensures underline doesn’t appear on hover */
+}
+
+.project-title {
+  color: var(--highlight); 
+  font-weight: 700;
+}
+
+.project-link:hover {
+  background: var(--highlight);  /* yellow bubble on hover */
+  color: #222;
+  transform: scale(1.05);
+}
+
+/* Education */
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+.education-grid .card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  padding: 15px;
+  transition: transform 0.3s;
+}
+.education-grid .card:hover {
+  transform: translateY(-5px);
+}
+.education-grid h3 {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+.education-grid h3 i {
+  margin-right: 6px;
+  color: var(--highlight);
+}
+.education-grid p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Certifications */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.pill-highlight {
+  background: var(--hover-bg);
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.3s, background 0.3s;
+}
+.pill-highlight i {
+  color: var(--highlight);
+}
+.pill-highlight:hover {
+  transform: scale(1.05);
+  background: var(--highlight);
+  color: #222;
+}
+
+/* Experience Timeline */
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-in-out;
+}
+.timeline-marker {
+  width: 12px;
+  height: 12px;
+  background: var(--primary);
+  border-radius: 50%;
+  margin-right: 12px;
+  margin-top: 6px;
+  flex-shrink: 0;
+  animation: pulseMarker 2s infinite;
+}
+.timeline-item h3 {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+.timeline-item .muted {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+.timeline-item p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Contact */
+.contact-card {
+  text-align: center;
+  padding: 20px;
+}
+.contact-links {
+  margin-top: 10px;
+}
+.contact-links a {
+  display: inline-block;
+  margin: 8px;
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+.contact-links a:hover {
+  color: var(--highlight);
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 15px;
+  background: rgba(0,0,0,0.05);
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* Fade In (general use) */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade In Up (slide upward while appearing) */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Float (gentle up/down loop for profile photo) */
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Pulse (scaling + color change for icons/checkmarks) */
+@keyframes pulse {
+  0%   { transform: scale(1);   color: var(--primary); }
+  50%  { transform: scale(1.2); color: var(--highlight); }
+  100% { transform: scale(1);   color: var(--primary); }
+}
+
+/* Bounce (small vertical bounce for stats icons) */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-5px); }
+}
+
+/* Pulse Marker (timeline markers animate subtly) */
+@keyframes pulseMarker {
+  0%   { transform: scale(1);   background: var(--primary); }
+  50%  { transform: scale(1.3); background: var(--highlight); }
+  100% { transform: scale(1);   background: var(--primary); }
+}
+
+/* Staggered Animation Utility */
+.animate-delay-1 { animation-delay: 0.2s; }
+.animate-delay-2 { animation-delay: 0.4s; }
+.animate-delay-3 { animation-delay: 0.6s; }
+.animate-delay-4 { animation-delay: 0.8s; }
+.animate-delay-5 { animation-delay: 1s; }
